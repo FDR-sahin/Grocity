@@ -109,6 +109,7 @@ function Navber() {
           <li>
             <Link
               to='/'
+              onClick={() => setShowMenu(false)}
               className="font-semibold tracking-wider text-orange-500"
             >
               Home
@@ -117,6 +118,7 @@ function Navber() {
           <li>
             <Link
               to='/about'
+              onClick={() => setShowMenu(false)}
               className="font-semibold tracking-wider text-zinc-800  hover:text-orange-500"
             >
               About Us
@@ -125,6 +127,7 @@ function Navber() {
           <li>
             <Link
               to='/processdas'
+              onClick={() => setShowMenu(false)}
               className="font-semibold tracking-wider text-zinc-800  hover:text-orange-500"
             >
               Process
@@ -133,6 +136,7 @@ function Navber() {
           <li>
             <Link
               to='/contact'
+              onClick={() => setShowMenu(false)}
               className="font-semibold tracking-wider text-zinc-800  hover:text-orange-500"
             >
               Contact Us

@@ -35,7 +35,7 @@ const products = [
     },
     {
         id: 2,
-        name: 'Butter',
+        name: 'Noman',
         price: 3.5,
         category: 'Dairy',
         image: Butter

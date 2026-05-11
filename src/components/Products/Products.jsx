@@ -3,6 +3,7 @@ import Heading from '../Heading/Heading'
 import ProductList from '../ProductList/ProductList'
 import Card from '../Cards/Card'
 import Button from '../Button/Button'
+import { Link } from 'react-router-dom'
 
 function Products() {
 
@@ -13,7 +14,7 @@ function Products() {
 
   const renderCard = filterItem.slice(0,8).map(product => {
     return(
-      <Card image = {product.image} title = {product.name} price = {product.price}/>
+      <Card key={product.id} image = {product.image} title = {product.name} price = {product.price}/>
     )
   })
 
@@ -39,7 +40,7 @@ function Products() {
             </div>
 
             <div className='text-center mt-15'>
-              <Button content= 'View All'/>
+              <Link to="/allproduct" className='bg-gradient-to-b from-orange-300 to-orange-500 md:text-lg text-md text-white px-8 py-3 rounded-lg font-medium hover:scale-105 hover:to-orange-600 transition-all duration-300 cursor-pointer'>View All</Link>
             </div>
         </div>
     </section>

@@ -8,6 +8,7 @@ import Products from '../../components/Products/Products'
 import Discound from '../../components/Discound/Discound'
 import Process from '../../components/Process/Process'
 import Testimonials from '../../components/Testimonials/Testimonials'
+import Gullary from '../../components/Guallary/Gullary'
 
 
 
@@ -19,6 +20,7 @@ function Home() {
        <Catagory/>
        <Values/>
        <Products/>
+       <Gullary/>
        <Discound/>
        <Process/>
        <Testimonials/>

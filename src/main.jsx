@@ -9,6 +9,11 @@ import About from './Pages/About/About.jsx'
 //import Process from './components/Process/Process.jsx'
 import ProcessDas from './Pages/ProcessDas/ProcessDas.jsx'
 import Contact from './Pages/Contact/Contact.jsx'
+import Fruits from './Pages/Fruits/Fruits.jsx'
+import Dairy from './Pages/Dairy/Dairy.jsx'
+import Seefoods from './Pages/Seefoods/Seefoods.jsx'
+import  AiFillProduct  from './Pages/AllProduct/AllProduct.jsx'
+import ShopePage from './Pages/ShopePage/ShopePage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -30,6 +35,26 @@ const router = createBrowserRouter([
       {
         path: 'contact',
         element: <Contact/>
+      },
+      {
+        path: 'fruits',
+        element: <Fruits />
+      },
+      {
+        path: 'dairy',
+        element: <Dairy/>
+      },
+      {
+        path: 'seefoods',
+        element: <Seefoods/>
+      },
+      {
+        path: 'allproduct',
+        element: <AiFillProduct/>
+      },
+      {
+        path: 'shopepage',
+        element: <ShopePage/>
       },
     ]
   }

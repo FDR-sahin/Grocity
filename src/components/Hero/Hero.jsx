@@ -1,6 +1,7 @@
 import React from 'react'
 import Grocery from '../../assets/grocery.png'
-import Button from '../Button/Button'
+
+import { Link } from 'react-router-dom'
 
 function Hero() {
   return (
@@ -15,7 +16,7 @@ function Hero() {
                 <p className='text-zinc-600 md:text-lg text-md max-w-132.5 mt-5 mb-10'>
                     Bred for a high content of beneficial substances. Our products are all fresh and healthy.
                 </p>
-                <Button content = "Shop Now" />
+                <Link to="/shopepage" className='bg-gradient-to-b from-orange-300 to-orange-500 md:text-lg text-md text-white px-8 py-3 rounded-lg font-medium hover:scale-105 hover:to-orange-600 transition-all duration-300 cursor-pointer'>Shope Now</Link>
             </div>
 
              {/* hero img */}

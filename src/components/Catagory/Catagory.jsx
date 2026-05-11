@@ -4,6 +4,7 @@ import fruth from '../../assets/fruits-and-veggies.png'
 import daity from '../../assets/dairy-and-eggs.png'
 import sea from '../../assets/meat-and-seafood.png'
 import Button from '../Button/Button'
+import { Link } from 'react-router-dom'
 
 function Catagory() {
 
@@ -16,7 +17,7 @@ function Catagory() {
             <div className='bg-zinc-100 pt-17 p-8 rounded-xl '>
                 <h1 className='text-3xl font-bold text-zinc-800'>{card.title}</h1>
                 <p className='text-zinc-600 mt-3 mb-4'>{card.para}</p>
-                <a href="#" className='bg-gradient-to-b from-orange-300 to-orange-500 md:text-lg text-md text-white px-8 py-3 rounded-lg font-medium hover:scale-105 hover:to-orange-600 transition-all duration-300 cursor-pointer'>See All</a>
+                <Link to={card.path} className='bg-gradient-to-b from-orange-300 to-orange-500 md:text-lg text-md text-white px-8 py-3 rounded-lg font-medium hover:scale-105 hover:to-orange-600 transition-all duration-300 cursor-pointer'>See All</Link>
             </div>
         </div>
     )
@@ -43,17 +44,20 @@ const catagory = [
        title:'Fruits & Veggies',
        para:'Fresh, organic produce sourced daily from local farms. Explore a wide range of seasonal fruits and crisp vegetables.',
        image: fruth,
+       path:'/fruits'
     },
     {
        id:2,
        title:'Dairy & Eggs',
        para:'Wholesome dairy products and free-range eggs. From creamy milk and yogurt to artisanal cheeses.',
        image: daity,
+       path:'/dairy'
     },
     {
        id:3,
        title:'Meat & SeaFood',
        para:'High-quality, responsibly sourced meat and seafood. Choose from fresh cuts, marinated options, and more.',
        image: sea,
+       path:'/seefoods'
     }
 ]

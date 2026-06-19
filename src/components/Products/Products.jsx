@@ -14,7 +14,7 @@ function Products() {
 
   const renderCard = filterItem.slice(0,8).map(product => {
     return(
-      <Card key={product.id} image = {product.image} title = {product.name} price = {product.price}/>
+      <Card key={product.id} image = {product.image} name = {product.name} price = {product.price}/>
     )
   })
 
@@ -35,7 +35,7 @@ function Products() {
               }
             </div>
              
-            <div className='grid md:grid-cols-4 grid-cols-1 gap-9 mt-20'>
+            <div className=' grid md:grid-cols-4 grid-cols-1 gap-9 mt-20'>
               {renderCard}
             </div>
 

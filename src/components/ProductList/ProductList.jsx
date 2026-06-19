@@ -200,6 +200,8 @@ const products = [
         category: 'Vegetables',
         image: Lettuce
     },
+   
+    
 ];
 
 

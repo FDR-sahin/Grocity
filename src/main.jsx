@@ -1,40 +1,44 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-// import App from './App.jsx'
+
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import { store } from './store.js'
+
+
 import Layout from './Layout/Layout.jsx'
 import Home from './Pages/Home/Home.jsx'
 import About from './Pages/About/About.jsx'
-//import Process from './components/Process/Process.jsx'
 import ProcessDas from './Pages/ProcessDas/ProcessDas.jsx'
 import Contact from './Pages/Contact/Contact.jsx'
 import Fruits from './Pages/Fruits/Fruits.jsx'
 import Dairy from './Pages/Dairy/Dairy.jsx'
 import Seefoods from './Pages/Seefoods/Seefoods.jsx'
-import  AiFillProduct  from './Pages/AllProduct/AllProduct.jsx'
+import AllProduct from './Pages/AllProduct/AllProduct.jsx'
 import ShopePage from './Pages/ShopePage/ShopePage.jsx'
+import AddToCart from './Pages/AddTocart/AddToCart.jsx'
 
 const router = createBrowserRouter([
   {
-    path:'/',
-    element:<Layout/>,
+    path: '/',
+    element: <Layout />,
     children: [
       {
         path: '',
-        element: <Home/>
+        element: <Home />
       },
       {
         path: 'about',
-        element: <About/>
+        element: <About />
       },
       {
         path: 'processdas',
-        element: <ProcessDas/>
+        element: <ProcessDas />
       },
       {
         path: 'contact',
-        element: <Contact/>
+        element: <Contact />
       },
       {
         path: 'fruits',
@@ -42,19 +46,23 @@ const router = createBrowserRouter([
       },
       {
         path: 'dairy',
-        element: <Dairy/>
+        element: <Dairy />
       },
       {
         path: 'seefoods',
-        element: <Seefoods/>
+        element: <Seefoods />
       },
       {
         path: 'allproduct',
-        element: <AiFillProduct/>
+        element: <AllProduct />
       },
       {
         path: 'shopepage',
-        element: <ShopePage/>
+        element: <ShopePage />
+      },
+      {
+        path: 'addtocart',
+        element:<AddToCart/>
       },
     ]
   }
@@ -62,21 +70,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router}/>
-  </StrictMode>,
-);
-
-
-
-
-
-// import { StrictMode } from 'react'
-// import { createRoot } from 'react-dom/client'
-// import './index.css'
-// import App from './App.jsx'
-
-// createRoot(document.getElementById('root')).render(
-//   <StrictMode>
-//     <App />
-//   </StrictMode>,
-// )
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
+  </StrictMode>
+)

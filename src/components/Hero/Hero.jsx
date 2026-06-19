@@ -2,8 +2,11 @@ import React from 'react'
 import Grocery from '../../assets/grocery.png'
 
 import { Link } from 'react-router-dom'
+import {  useDispatch } from 'react-redux'
+import { addToCart } from '../../features/cartSlice'
 
 function Hero() {
+     const dispatch = useDispatch()
   return (
     <section>
         <div className='min-h-screen max-w-350 mx-auto px-10 flex md:flex-row flex-col items-center md:pt-25 pt-30'>
@@ -16,6 +19,7 @@ function Hero() {
                 <p className='text-zinc-600 md:text-lg text-md max-w-132.5 mt-5 mb-10'>
                     Bred for a high content of beneficial substances. Our products are all fresh and healthy.
                 </p>
+              
                 <Link to="/shopepage" className='bg-gradient-to-b from-orange-300 to-orange-500 md:text-lg text-md text-white px-8 py-3 rounded-lg font-medium hover:scale-105 hover:to-orange-600 transition-all duration-300 cursor-pointer'>Shope Now</Link>
             </div>
 

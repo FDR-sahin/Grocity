@@ -3,8 +3,10 @@ import { FaTruckFast } from "react-icons/fa6";
 import { FaDollarSign } from "react-icons/fa";
 import { Ri24HoursLine } from "react-icons/ri";
 import Pic from '../../assets/pic.jpeg'
+// import { useSelector } from 'react-redux'
 
 function About() {
+   //  const {cartItems} = useSelector((state) => state.cart)
   return (
     <div className=' my-30 max-w-350 mx-auto px-10'>
            <h3 className='text-center my-5 md:text-2xl text-lg font-semibold text-green-500'>About Us</h3>
@@ -34,9 +36,23 @@ function About() {
             </div>
          </div>
         </div>
+        
 
 
-
+        {/* <div>
+         {
+            cartItems.map((babu) => {
+               return(
+                   <div key={babu} className='bg-amber-100 p-2 h-50 w-40 rounded-[10px] flex items-center justify-center flex-col gap-3'>
+            <img className='h-20 w-20 object-contain' src={babu.image} alt={babu.name} width="100" />
+            <div>{babu.name}</div>
+            <div>${babu.price}</div>
+          </div>
+               )
+            } )
+         }
+         
+        </div> */}
       
         
         

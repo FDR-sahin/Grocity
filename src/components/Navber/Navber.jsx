@@ -5,8 +5,10 @@ import { IoSearchSharp } from "react-icons/io5";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoCloseSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import { useSelector } from 'react-redux'
 
 function Navber() {
+  const {cartItems} = useSelector((state) => state.cart);
   const [showMenu, setShowMenu] = useState(false);
   const [isScroll, setIsScroll] = useState(false);
   const toggleMenu = () => {
@@ -86,9 +88,12 @@ function Navber() {
           <a href="" className="text-2xl text-zinc-800">
             <FaHeart />
           </a>
-          <a href="" className="text-2xl text-zinc-800">
+          <Link to='/addtocart' className="relative text-2xl text-zinc-800 z-8">
+           <h1 className="text-[14px] bg-red-600 text-white px-2 py-1 rounded-full absolute bottom-3 left-4 z-10" > {cartItems.length}</h1>
+            
             <HiShoppingBag />
-          </a>
+
+          </Link>
           <button
             className="text-zinc-800  text-3xl md:hidden"
             onClick={toggleMenu}

@@ -51,7 +51,7 @@ import goti from '../../assets/gori.webp'
 // }
 function Gullary() {
   return (
-    <div className="py-5 max-w-7xl mx-auto px-4 md:grid md:grid-cols-3 grid-cols-1 md:gap-4">
+    <div className="py-5 max-w-7xl mx-auto px-4 md:grid md:grid-cols-4 grid-cols-1 md:gap-4">
       <div className="bg-zinc-100 p-3 max-w-[280px] rounded-lg flex flex-col items-center shadow-sm">
         {/* ছবির অংশ - Aspect Ratio ব্যবহার করা ভালো */}
         <div className="w-full h-40 flex justify-center items-center overflow-hidden">
@@ -168,6 +168,50 @@ function Gullary() {
             </button>
           </div>
         </div>
+
+
+      </div>
+
+      <div className="bg-zinc-100 p-3 max-w-[280px] rounded-lg flex flex-col items-center shadow-sm">
+        {/* ছবির অংশ - Aspect Ratio ব্যবহার করা ভালো */}
+        <div className="w-full h-40 flex justify-center items-center overflow-hidden">
+          <img src={goti} alt="Product" className="object-contain h-full" />
+        </div>
+
+        <div className="bg-white w-full flex flex-col p-4 rounded-b">
+          <h1 className="text-xl font-bold">Heading</h1>
+          <h2 className="text-md font-semibold text-blue-800">Rs. 1800.00</h2>
+          
+          <div className="flex items-center gap-2 mb-1">
+            <p className="text-xs text-zinc-400 line-through">Rs. 20000</p>
+            <span className="text-[10px] bg-amber-500 px-2 py-0.5 rounded-full font-bold">Save 10%</span>
+          </div>
+
+          <div className="flex items-center gap-2 mb-2">
+            <div className="flex text-yellow-400 text-xs">
+              <IoIosStar /><IoIosStar /><IoIosStar /><IoIosStar /><IoIosStar />
+            </div>
+            <p className="text-[10px] font-bold text-zinc-500">Best Rating</p>
+          </div>
+
+          {/* line-clamp-2 ব্যবহার করে হাইট কন্ট্রোল করা হয়েছে */}
+          <p className="text-zinc-600 text-xs line-clamp-2 mb-3">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Voluptatem ab sint dolores repudiandae.
+          </p>
+
+          <div className="flex items-center gap-2">
+            <button className="bg-blue-700 text-white text-sm px-3 py-1.5 rounded flex-grow">Buy Now</button>
+            <button className="bg-zinc-100 text-blue-700 p-2 rounded hover:bg-blue-100 transition-colors">
+              <FaCartPlus />
+            </button>
+            <button className="bg-zinc-100 text-red-500 p-2 rounded hover:bg-red-50 transition-colors">
+              <FaHeart />
+            </button>
+          </div>
+        </div>
+
+        
       </div>
     </div>
   );

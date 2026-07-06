@@ -3,6 +3,8 @@ import { IoIosStar } from "react-icons/io";
 import { FaCartPlus } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
 import goti from '../../assets/gori.webp'
+import licu from '../../assets/ll.jpg'
+import mm from '../../assets/mango.jpg'
 
 // function Gullary() {
 //   return (
@@ -51,6 +53,8 @@ import goti from '../../assets/gori.webp'
 // }
 function Gullary() {
   return (
+    <>
+    <h1 className="text-center text-4xl font-bold"><span className="text-orange-500">Jonoorio</span> priduct</h1>
     <div className="py-5 max-w-7xl mx-auto px-4 md:grid md:grid-cols-4 grid-cols-1 md:gap-4">
       <div className="bg-zinc-100 p-3 max-w-[280px] rounded-lg flex flex-col items-center shadow-sm">
         {/* ছবির অংশ - Aspect Ratio ব্যবহার করা ভালো */}
@@ -94,7 +98,7 @@ function Gullary() {
       <div className="bg-zinc-100 p-3 max-w-[280px] rounded-lg flex flex-col items-center shadow-sm">
         {/* ছবির অংশ - Aspect Ratio ব্যবহার করা ভালো */}
         <div className="w-full h-40 flex justify-center items-center overflow-hidden">
-          <img src={goti} alt="Product" className="object-contain h-full" />
+          <img src={licu} alt="Product" className="object-contain h-full" />
         </div>
 
         <div className="bg-white w-full flex flex-col p-4 rounded-b">
@@ -175,7 +179,7 @@ function Gullary() {
       <div className="bg-zinc-100 p-3 max-w-[280px] rounded-lg flex flex-col items-center shadow-sm">
         {/* ছবির অংশ - Aspect Ratio ব্যবহার করা ভালো */}
         <div className="w-full h-40 flex justify-center items-center overflow-hidden">
-          <img src={goti} alt="Product" className="object-contain h-full" />
+          <img src={mm} alt="Product" className=" object-contain h-full" />
         </div>
 
         <div className="bg-white w-full flex flex-col p-4 rounded-b">
@@ -214,6 +218,7 @@ function Gullary() {
         
       </div>
     </div>
+    </>
   );
 }
 export default Gullary;
